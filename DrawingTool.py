@@ -1,4 +1,4 @@
-from ActivationFunction import sigmoid,tanh,relu,leaky_relu,elu,swish
+from ActivationFunction import sigmoid,tanh,relu,leaky_relu,elu,swish,softmax,softplus,mish,gelu,prelu,maxout
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
@@ -62,11 +62,16 @@ def plot_activation_function(func_dict,x_range=(-4,4),figsize=(12,8)):
 if __name__ == '__main__':
     activation_funcs = {
         "sigmoid": (sigmoid, "Sigmoid", "#FF4E50"),
-        "tanh":(tanh, "Tanh", "#FF4E50"),
+        "tanh": (tanh, "Tanh", "#FF4E50"),
         "relu": (relu, "Relu", "#FF4E50"),
         "leaky_relu": (leaky_relu, "Leaky ReLU", "#FF4E50"),
-        "elu": (elu, "Elu", "#FF4E50"),
+        "elu": (elu, "ELU", "#FF4E50"),
         "swish": (swish, "Swish", "#FF4E50"),
-
+        "softmax": (softmax, "Softmax", "#FF4E50"),
+        "softplus": (softplus, "SoftPlus", "#FF4E50"),
+        "mish": (mish, "Mish", "#FF4E50"),
+        "gelu": (gelu, "GELU", "#FF4E50"),
+        "prelu": (prelu, "PReLU", "#FF4E50"),
     }
+
     plot_activation_function(activation_funcs)

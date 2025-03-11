@@ -1,0 +1,1 @@
+![all_activation_functions](./assets/all_activation_functions.png)
